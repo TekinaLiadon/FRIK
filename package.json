@@ -1,0 +1,30 @@
+{
+  "name": "FRIK",
+  "module": "01-app/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "build_server": "bun build \\\n\t--compile \\\n\t--minify-whitespace \\\n\t--minify-syntax \\\n\t--target bun \\\n\t--outfile server \\\n\t./01-app/index.ts",
+    "start": "./server",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^1.4.0",
+    "@elysiajs/swagger": "^0.8.5",
+    "arctic": "^3.7.0",
+    "elysia": "latest",
+    "elysia-i18next": "^4.0.3",
+    "elysia-oauth2": "^2.1.0",
+    "elysia-rate-limit": "^4.4.0",
+    "i18next": "^25.5.2",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.11"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
